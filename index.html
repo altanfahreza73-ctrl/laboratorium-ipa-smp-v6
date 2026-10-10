@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#0b1728">
+<meta name="description" content="Laboratorium IPA SMP versi 6.0 — belajar sains melalui materi, simulasi, eksperimen virtual, dan kuis interaktif.">
+<title>Laboratorium IPA SMP 6.0</title>
+<style>
+:root{--bg:#081321;--panel:#101f32;--panel2:#14263c;--line:#263a52;--text:#eef5ff;--muted:#9fb1c9;--mint:#65f0c0;--blue:#78b8ff;--gold:#ffd477;--pink:#ff8db5;--radius:20px}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:radial-gradient(ellipse at 80% -10%,#173d55 0,transparent 38%),radial-gradient(ellipse at 0% 35%,#102a45 0,transparent 35%),var(--bg);color:var(--text);font:16px/1.55 system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif}button,input,select{font:inherit}button{cursor:pointer}.wrap{max-width:1180px;margin:auto;padding:0 22px}.topbar{display:flex;justify-content:space-between;align-items:center;gap:18px;padding:22px 0;border-bottom:1px solid #ffffff12}.brand{display:flex;align-items:center;gap:12px;font-weight:800;letter-spacing:-.3px}.logo{width:43px;height:43px;border-radius:14px;display:grid;place-items:center;background:linear-gradient(140deg,var(--mint),var(--blue));color:#071321;font-size:23px;box-shadow:0 8px 30px #65f0c026}.version{font-size:12px;color:var(--mint);border:1px solid #65f0c055;border-radius:99px;padding:5px 9px;white-space:nowrap}.hero{display:grid;grid-template-columns:1.25fr .75fr;gap:30px;align-items:center;padding:55px 0 36px}.eyebrow{color:var(--mint);text-transform:uppercase;letter-spacing:2px;font-size:12px;font-weight:800}.hero h1{font-size:clamp(37px,5.4vw,66px);line-height:1.04;letter-spacing:-2px;margin:13px 0 18px}.hero h1 span{color:var(--mint)}.hero p{color:var(--muted);max-width:650px;font-size:17px}.actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:24px}.btn{border:1px solid var(--line);padding:11px 16px;border-radius:12px;color:var(--text);background:var(--panel2);font-weight:700}.btn.primary{background:var(--mint);border-color:var(--mint);color:#062018}.btn:hover{transform:translateY(-1px);filter:brightness(1.07)}.hero-art{min-height:270px;border:1px solid #65f0c02b;border-radius:28px;background:linear-gradient(145deg,#153b4b,#101d32 70%);display:grid;place-items:center;position:relative;overflow:hidden}.orbit{width:210px;height:210px;border:1px solid #65f0c055;border-radius:50%;display:grid;place-items:center;position:relative}.orbit:before,.orbit:after{content:"";position:absolute;border:1px dashed #78b8ff66;border-radius:50%;inset:22px;transform:rotate(45deg) scaleX(.55)}.orbit:after{transform:rotate(-45deg) scaleX(.55)}.atom{font-size:76px;color:var(--mint);text-shadow:0 0 36px #65f0c055}.float{position:absolute;background:#0b1929;border:1px solid var(--line);padding:10px 13px;border-radius:13px;font-size:13px;box-shadow:0 10px 35px #0003}.f1{top:28px;left:20px}.f2{right:16px;top:70px}.f3{bottom:24px;left:42px}.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:10px 0 38px}.stat{background:#ffffff06;border:1px solid #ffffff12;padding:16px;border-radius:16px}.stat strong{display:block;font-size:24px;color:var(--mint)}.stat span{font-size:13px;color:var(--muted)}.section{padding:25px 0 34px}.section-head{display:flex;justify-content:space-between;align-items:end;gap:16px;margin-bottom:19px}.section h2{font-size:27px;letter-spacing:-.6px;margin:5px 0}.section-head p{margin:0;color:var(--muted);font-size:14px}.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.card{background:linear-gradient(150deg,#14263a,#0e1b2c);border:1px solid var(--line);border-radius:var(--radius);padding:20px;min-width:0}.card:hover{border-color:#65f0c05e}.card-icon{width:47px;height:47px;border-radius:14px;display:grid;place-items:center;font-size:24px;background:#65f0c015;margin-bottom:14px}.card h3{margin:0 0 7px;font-size:18px}.card p{margin:0;color:var(--muted);font-size:14px}.card .btn{margin-top:16px;font-size:13px;padding:9px 12px}.tag{display:inline-block;color:var(--mint);background:#65f0c014;border-radius:7px;padding:3px 8px;font-size:11px;font-weight:800;margin-bottom:9px}.tabs{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:16px}.tab{background:#101f32;border:1px solid var(--line);border-radius:10px;padding:9px 14px;color:var(--muted);font-weight:700}.tab.active{background:var(--mint);color:#062018;border-color:var(--mint)}.lesson-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.lesson{background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:17px}.lesson h3{font-size:16px;margin:0 0 7px}.lesson p{color:var(--muted);font-size:13px;margin:0}.lesson small{display:block;color:var(--blue);margin-top:11px;font-weight:700}.workspace{display:grid;grid-template-columns:1fr 1fr;gap:15px}.control{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin:12px 0}.control label{font-size:13px;color:var(--muted)}select,input[type=range]{accent-color:var(--mint)}select{background:#0b1828;color:var(--text);border:1px solid var(--line);border-radius:9px;padding:9px;max-width:100%}.experiment-stage{background:#091827;border:1px solid var(--line);border-radius:16px;min-height:205px;padding:18px;display:flex;align-items:center;justify-content:center;flex-direction:column;text-align:center;overflow:hidden}.beaker{height:130px;width:100px;border:4px solid #b9e6ff99;border-top:0;border-radius:0 0 22px 22px;position:relative;overflow:hidden;margin:10px auto 0}.liquid{position:absolute;bottom:0;left:0;right:0;height:45%;background:#78b8ff99;transition:height .3s,background .3s}.bubble{position:absolute;border-radius:50%;background:#ffffff99;width:8px;height:8px;left:24px;bottom:28px;box-shadow:25px -20px #ffffff66,42px 2px #ffffff88,15px -47px #ffffff77}.readout{font-size:14px;color:var(--mint);margin-top:10px}.quiz-question{font-size:17px;font-weight:750;margin:6px 0 15px}.answers{display:grid;gap:9px}.answer{width:100%;text-align:left;padding:12px 14px;border-radius:12px;border:1px solid var(--line);background:#0b1929;color:var(--text)}.answer:hover{border-color:var(--blue)}.answer.correct{border-color:var(--mint);background:#65f0c014}.answer.wrong{border-color:var(--pink);background:#ff8db512}.feedback{min-height:27px;margin-top:12px;color:var(--muted);font-size:14px}.quiz-foot{display:flex;justify-content:space-between;align-items:center;gap:10px;margin-top:12px;font-size:13px;color:var(--muted)}.safety{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}.rule{padding:16px;background:#ffbd4d0b;border:1px solid #ffbd4d2b;border-radius:15px}.rule b{display:block;margin-bottom:5px}.rule p{font-size:13px;color:var(--muted);margin:0}.footer{margin-top:25px;padding:27px 0 38px;border-top:1px solid #ffffff12;color:var(--muted);font-size:13px;display:flex;justify-content:space-between;gap:15px;flex-wrap:wrap}.notice{color:var(--muted);font-size:12px;margin-top:12px}.pill{font-size:12px;color:var(--gold)}.hidden{display:none!important}
+@media(max-width:800px){.hero{grid-template-columns:1fr;padding-top:38px}.hero-art{min-height:235px}.grid,.lesson-grid{grid-template-columns:repeat(2,1fr)}.safety{grid-template-columns:repeat(2,1fr)}.workspace{grid-template-columns:1fr}.section-head{align-items:start;flex-direction:column}}
+@media(max-width:520px){.wrap{padding:0 15px}.topbar{padding:15px 0}.hero h1{font-size:43px;letter-spacing:-1.5px}.grid,.lesson-grid{grid-template-columns:1fr}.stats{gap:7px}.stat{padding:11px}.stat strong{font-size:20px}.stat span{font-size:11px}.safety{grid-template-columns:1fr 1fr}.card{padding:17px}.orbit{width:175px;height:175px}.atom{font-size:65px}.float{font-size:11px;padding:8px}.f1{left:10px}.f2{right:10px}}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header class="topbar">
+  <div class="brand"><div class="logo">⚗</div><div>LAB IPA <span style="color:var(--mint)">SMP</span></div></div>
+  <div class="version">VERSI 6.0 · BELAJAR INTERAKTIF</div>
+</header>
+<main>
+<section class="hero">
+  <div>
+    <div class="eyebrow">Jelajahi · Uji · Temukan</div>
+    <h1>Sains jadi lebih <span>seru.</span></h1>
+    <p>Selamat datang di Laboratorium IPA SMP. Pelajari konsep sains, lakukan eksperimen virtual, dan uji pemahamanmu—langsung dari browser, tanpa instalasi.</p>
+    <div class="actions"><button class="btn primary" onclick="document.getElementById('materi').scrollIntoView({behavior:'smooth'})">Mulai belajar ↗</button><button class="btn" onclick="document.getElementById('eksperimen').scrollIntoView({behavior:'smooth'})">Coba eksperimen</button></div>
+  </div>
+  <div class="hero-art" aria-label="Ilustrasi atom sains">
+    <div class="float f1">🧬 Biologi</div><div class="float f2">🪐 Fisika</div><div class="float f3">🧪 Kimia</div>
+    <div class="orbit"><div class="atom">⚛</div></div>
+  </div>
+</section>
+<div class="stats">
+  <div class="stat"><strong>3</strong><span>Tingkat kelas · VII–IX</span></div>
+  <div class="stat"><strong>12+</strong><span>Topik pembelajaran</span></div>
+  <div class="stat"><strong>Interaktif</strong><span>Simulasi & kuis langsung</span></div>
+</div>
+<section class="section" id="materi">
+  <div class="section-head"><div><div class="eyebrow">Pusat pembelajaran</div><h2>Pilih kelasmu</h2><p>Materi ringkas untuk menemani pelajaran IPA di sekolah.</p></div></div>
+  <div class="tabs" role="tablist"><button class="tab active" data-grade="7">Kelas VII</button><button class="tab" data-grade="8">Kelas VIII</button><button class="tab" data-grade="9">Kelas IX</button></div>
+  <div id="lessons" class="lesson-grid"></div>
+</section>
+<section class="section" id="fitur">
+  <div class="section-head"><div><div class="eyebrow">Belajar sambil mencoba</div><h2>Ruang eksplorasi</h2><p>Pilih aktivitas untuk memperdalam pemahamanmu.</p></div></div>
+  <div class="grid">
+    <article class="card"><div class="card-icon">🧪</div><span class="tag">SIMULASI</span><h3>Laboratorium virtual</h3><p>Ubah suhu dan amati perubahan warna serta kondisi larutan dalam model sederhana.</p><button class="btn" onclick="document.getElementById('eksperimen').scrollIntoView({behavior:'smooth'})">Masuk lab →</button></article>
+    <article class="card"><div class="card-icon">🧠</div><span class="tag">LATIHAN</span><h3>Kuis IPA</h3><p>Jawab soal pilihan ganda, lihat pembahasan singkat, dan kumpulkan skor belajarmu.</p><button class="btn" onclick="document.getElementById('kuis').scrollIntoView({behavior:'smooth'})">Mulai kuis →</button></article>
+    <article class="card"><div class="card-icon">🛡️</div><span class="tag">WAJIB TAHU</span><h3>Keselamatan lab</h3><p>Kenali kebiasaan aman sebelum melakukan kegiatan praktikum di sekolah.</p><button class="btn" onclick="document.getElementById('keselamatan').scrollIntoView({behavior:'smooth'})">Lihat panduan →</button></article>
+  </div>
+</section>
+<section class="section" id="eksperimen">
+  <div class="section-head"><div><div class="eyebrow">Eksperimen interaktif</div><h2>Amati perubahan suhu</h2><p>Model ilustratif untuk belajar hubungan suhu dan indikator larutan.</p></div><span class="pill">● SIMULASI VIRTUAL</span></div>
+  <div class="workspace">
+    <div class="card">
+      <h3>Atur kondisi percobaan</h3><p>Geser suhu, lalu amati tampilan model larutan.</p>
+      <div class="control"><label for="temp">Suhu: <strong id="tempValue">25°C</strong></label><input id="temp" type="range" min="0" max="100" value="25" style="flex:1;min-width:120px"></div>
+      <div class="control"><label for="substance">Indikator:</label><select id="substance"><option value="blue">Indikator biru (model)</option><option value="red">Indikator merah (model)</option><option value="green">Indikator hijau (model)</option></select></div>
+      <button class="btn primary" id="resetLab">Atur ulang</button>
+      <p class="notice">Catatan: ini simulasi visual sederhana, bukan data eksperimen nyata. Warna tidak mewakili zat kimia tertentu.</p>
+    </div>
+    <div class="experiment-stage"><div id="stageTitle" style="font-weight:800">Larutan pada 25°C</div><div class="beaker"><div id="liquid" class="liquid"></div><div class="bubble"></div></div><div class="readout" id="labReadout">Suhu sedang · gelembung sedikit</div></div>
+  </div>
+</section>
+<section class="section" id="kuis">
+  <div class="section-head"><div><div class="eyebrow">Uji pemahaman</div><h2>Kuis kilat IPA</h2><p>Pilih jawaban terbaik. Kamu bisa mencoba ulang kapan saja.</p></div></div>
+  <div class="workspace">
+    <div class="card">
+      <div class="quiz-foot"><span id="qCount">Soal 1 dari 6</span><span>Skor: <strong id="score">0</strong></span></div>
+      <div class="quiz-question" id="question">Memuat soal…</div><div class="answers" id="answers"></div><div class="feedback" id="feedback" aria-live="polite"></div>
+      <div class="actions"><button class="btn primary" id="nextQuestion" disabled>Soal berikutnya →</button><button class="btn" id="restartQuiz">Ulangi kuis</button></div>
+    </div>
+    <div class="card"><div class="card-icon">💡</div><h3>Strategi belajar</h3><p>Baca pertanyaan dengan teliti, pikirkan konsep yang berkaitan, lalu pilih jawaban. Jika keliru, baca penjelasannya dan coba lagi.</p><hr style="border:0;border-top:1px solid var(--line);margin:18px 0"><div class="tag">TIPS</div><p>IPA bukan hanya menghafal. Biasakan mengamati, bertanya, membuat dugaan, melakukan pengujian dengan aman, lalu menyimpulkan berdasarkan bukti.</p></div>
+  </div>
+</section>
+<section class="section" id="keselamatan">
+  <div class="section-head"><div><div class="eyebrow">Utamakan keselamatan</div><h2>Aturan dasar laboratorium</h2><p>Selalu ikuti arahan guru saat praktikum nyata.</p></div></div>
+  <div class="safety">
+    <div class="rule"><b>🥽 Gunakan pelindung</b><p>Pakai kacamata, jas lab, atau perlengkapan sesuai instruksi guru.</p></div>
+    <div class="rule"><b>🚫 Jangan mencicipi</b><p>Jangan mencicipi bahan atau menghirup zat secara langsung.</p></div>
+    <div class="rule"><b>🧑‍🏫 Ikuti instruksi</b><p>Jangan melakukan percobaan tanpa izin dan pengawasan guru.</p></div>
+    <div class="rule"><b>🧼 Rapikan area</b><p>Laporkan tumpahan atau alat rusak, lalu cuci tangan setelah praktikum.</p></div>
+  </div>
+</section>
+</main>
+<footer class="footer"><span>⚗ Laboratorium IPA SMP · Versi 6.0</span><span>Belajar dengan rasa ingin tahu, bertindak dengan aman.</span></footer>
+</div>
+<script>
+const lessonData={
+7:[
+['Hakikat IPA dan pengukuran','Mengenal observasi, variabel, besaran, satuan, dan alat ukur.','Dasar sains'],
+['Zat dan perubahannya','Membedakan unsur, senyawa, campuran, serta perubahan fisika dan kimia.','Materi'],
+['Suhu dan kalor','Memahami suhu, perpindahan kalor, dan perubahan wujud.','Energi'],
+['Organisasi kehidupan','Mengenal sel, jaringan, organ, dan sistem organ.','Biologi'],
+['Ekologi dan lingkungan','Mempelajari ekosistem, rantai makanan, dan keseimbangan lingkungan.','Ekologi'],
+['Bumi dan tata surya','Mengenal benda langit, rotasi, revolusi, dan fenomena terkait.','Astronomi']],
+8:[
+['Gerak dan gaya','Menghubungkan perpindahan, kecepatan, percepatan, dan gaya.','Fisika'],
+['Usaha dan pesawat sederhana','Mengenal usaha, daya, tuas, katrol, dan bidang miring.','Energi'],
+['Struktur dan fungsi tubuh','Mempelajari sistem pencernaan, pernapasan, dan peredaran darah.','Biologi'],
+['Getaran, gelombang, bunyi','Mengamati amplitudo, frekuensi, dan perambatan gelombang.','Gelombang'],
+['Cahaya dan alat optik','Mengenal pemantulan, pembiasan, cermin, dan lensa.','Optik'],
+['Tekanan zat','Memahami tekanan pada zat padat, cair, dan gas.','Materi']],
+9:[
+['Listrik dan kemagnetan','Mempelajari muatan, arus, tegangan, rangkaian, dan magnet.','Listrik'],
+['Reproduksi dan pewarisan sifat','Mengenal sistem reproduksi, gen, dan variasi sifat makhluk hidup.','Biologi'],
+['Pewarisan dan bioteknologi','Menjelajahi konsep dasar genetika dan pemanfaatan organisme.','Bioteknologi'],
+['Reaksi kimia dan partikel','Memahami partikel materi dan perubahan kimia sederhana.','Kimia'],
+['Adaptasi dan lingkungan','Menganalisis adaptasi, seleksi alam, dan pelestarian lingkungan.','Ekologi'],
+['Tata surya dan alam semesta','Meninjau gravitasi, benda langit, dan skala alam semesta.','Astronomi']]
+};
+const lessons=document.getElementById('lessons');
+function showLessons(g){document.querySelectorAll('.tab').forEach(b=>b.classList.toggle('active',b.dataset.grade===String(g)));lessons.innerHTML=lessonData[g].map((x,i)=>'<article class="lesson"><span class="tag">'+x[2]+'</span><h3>'+x[0]+'</h3><p>'+x[1]+'</p><small>Topik '+String(i+1).padStart(2,'0')+' · Kelas '+g+'</small></article>').join('')}
+document.querySelectorAll('.tab').forEach(b=>b.addEventListener('click',()=>showLessons(b.dataset.grade)));showLessons(7);
+const temp=document.getElementById('temp'),tempValue=document.getElementById('tempValue'),liquid=document.getElementById('liquid'),stageTitle=document.getElementById('stageTitle'),labReadout=document.getElementById('labReadout'),substance=document.getElementById('substance');
+function updateLab(){const t=Number(temp.value);tempValue.textContent=t+'°C';stageTitle.textContent='Larutan pada '+t+'°C';liquid.style.height=(25+t*.55)+'%';const colors={blue:'#78b8ff99',red:'#ff8db599',green:'#65f0c099'};liquid.style.background=colors[substance.value];labReadout.textContent=t<20?'Suhu rendah · model larutan tenang':t<60?'Suhu sedang · perubahan visual bertahap':'Suhu tinggi · model menunjukkan lebih banyak gelembung'}
+temp.addEventListener('input',updateLab);substance.addEventListener('change',updateLab);document.getElementById('resetLab').addEventListener('click',()=>{temp.value=25;substance.value='blue';updateLab()});updateLab();
+const questions=[
+{q:'Alat yang paling tepat untuk mengukur massa benda adalah…',a:['Termometer','Neraca','Gelas ukur','Stopwatch'],c:1,e:'Neraca digunakan untuk mengukur massa. Termometer mengukur suhu, gelas ukur mengukur volume, dan stopwatch mengukur waktu.'},
+{q:'Perubahan es menjadi air disebut…',a:['Menguap','Membeku','Mencair','Menyublim'],c:2,e:'Mencair adalah perubahan wujud dari padat menjadi cair akibat menerima kalor.'},
+{q:'Unit terkecil penyusun makhluk hidup adalah…',a:['Organ','Jaringan','Sistem organ','Sel'],c:3,e:'Sel adalah unit struktural dan fungsional terkecil makhluk hidup.'},
+{q:'Gaya dapat menyebabkan benda…',a:['Hanya berubah warna','Berubah gerak atau bentuk','Kehilangan massa selalu','Berhenti menjadi materi'],c:1,e:'Gaya dapat mengubah kecepatan, arah gerak, atau bentuk suatu benda.'},
+{q:'Dalam rantai makanan, tumbuhan hijau umumnya berperan sebagai…',a:['Produsen','Konsumen puncak','Pengurai','Predator'],c:0,e:'Tumbuhan hijau membuat makanan melalui fotosintesis sehingga berperan sebagai produsen.'},
+{q:'Satuan SI untuk kuat arus listrik adalah…',a:['Volt','Ohm','Ampere','Watt'],c:2,e:'Ampere (A) adalah satuan SI untuk kuat arus listrik.'}
+];
+let qi=0,score=0,answered=false;
+const question=document.getElementById('question'),answers=document.getElementById('answers'),feedback=document.getElementById('feedback'),next=document.getElementById('nextQuestion');
+function renderQ(){answered=false;const q=questions[qi];document.getElementById('qCount').textContent='Soal '+(qi+1)+' dari '+questions.length;question.textContent=q.q;feedback.textContent='';answers.innerHTML='';next.disabled=true;next.textContent=qi===questions.length-1?'Lihat hasil →':'Soal berikutnya →';q.a.forEach((a,i)=>{const b=document.createElement('button');b.className='answer';b.textContent=String.fromCharCode(65+i)+'. '+a;b.addEventListener('click',()=>choose(i,b));answers.appendChild(b)});document.getElementById('score').textContent=score}
+function choose(i,button){if(answered)return;answered=true;const q=questions[qi];[...answers.children].forEach((b,j)=>{b.disabled=true;if(j===q.c)b.classList.add('correct')});if(i===q.c){score+=10;feedback.textContent='Benar! '+q.e}else{button.classList.add('wrong');feedback.textContent='Belum tepat. '+q.e}document.getElementById('score').textContent=score;next.disabled=false}
+next.addEventListener('click',()=>{if(!answered)return;if(qi<questions.length-1){qi++;renderQ()}else{question.textContent='Kuis selesai! Skormu '+score+' dari '+(questions.length*10)+'.';answers.innerHTML='';feedback.textContent=score>=50?'Hebat! Pemahamanmu sudah kuat. Coba lagi untuk mempertahankan hasil.':'Tetap semangat! Ulangi kuis dan pelajari pembahasan tiap soal.';next.disabled=true;next.textContent='Kuis selesai'}});document.getElementById('restartQuiz').addEventListener('click',()=>{qi=0;score=0;renderQ()});renderQ();
+</script>
+</body>
+</html>
